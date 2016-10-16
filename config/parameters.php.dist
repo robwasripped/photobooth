@@ -1,8 +1,8 @@
 <?php
 
-$parameters = array(
-    'apiKey'        => '',
-    'apiSecret'     => '',
-    'apiCallback'   => '',
-    'accessToken'   => '',
+$servicesCredentials = array(
+    'instagram' => array(
+        'key'       => '',
+        'secret'    => '',
+    ),
 );
