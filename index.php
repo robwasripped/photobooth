@@ -22,6 +22,4 @@ $instagramService = $serviceFactory->createService('instagram', $credentials, $s
 
 $data = json_decode($instagramService->request('/users/self/media/recent'));
 
-foreach($data->data as $image) {
-    printf('<img src="%s" />', $image->images->low_resolution->url);
-}
+include 'view/index.php';
