@@ -1,0 +1,8 @@
+<?php
+
+$parameters = array(
+    'apiKey'        => '',
+    'apiSecret'     => '',
+    'apiCallback'   => '',
+    'accessToken'   => '',
+);

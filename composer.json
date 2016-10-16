@@ -6,5 +6,8 @@
             "name": "Rob Treacy",
             "email": "email@roberttreacy.com"
         }
-    ]
+    ],
+    "require": {
+        "lusitanian/oauth": "^0.8.9"
+    }
 }
