@@ -8,6 +8,7 @@
         }
     ],
     "require": {
-        "lusitanian/oauth": "^0.8.9"
+        "lusitanian/oauth": "^0.8.9",
+        "arcanedev/qr-code": "^1.0"
     }
 }

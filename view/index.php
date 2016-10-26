@@ -4,12 +4,22 @@
         <meta charset="UTF-8">
         <title></title>
         <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
     <body>
-        <?php
-            foreach($data->data as $image) {
-                printf('<img src="%s" />', $image->images->low_resolution->url);
+        <ol id="images">
+        </ol>
+        <script type="text/javascript">
+            function loadlink(){
+                $('#images').load('images.php',function () {
+                     $(this).unwrap();
+                });
             }
-        ?>
+            
+            loadlink();
+            setInterval(function(){
+                loadlink() // this will run after every 5 seconds
+            }, 8000);
+        </script>
     </body>
 </html>

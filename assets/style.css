@@ -11,3 +11,28 @@ and open the template in the editor.
 body {
     background-image: url('background.jpg');
 }
+
+#images {
+    list-style: none;
+}
+
+#images li {
+    display: inline-block;
+}
+
+#images li:first-child {
+    display: block;
+}
+
+#images li img {
+    display: block;
+    margin: 0 auto;
+}
+
+#images li + li img {
+    width: 256px;
+}
+
+#images li + li img + img {
+    display: none;
+}
