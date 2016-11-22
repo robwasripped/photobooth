@@ -1,0 +1,8 @@
+<?php
+
+$servicesCredentials = array(
+    'instagram' => array(
+        'key'       => '',
+        'secret'    => '',
+    ),
+);
