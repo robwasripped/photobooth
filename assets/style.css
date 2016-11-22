@@ -8,12 +8,14 @@ and open the template in the editor.
     Author     : Rob Treacy <email@roberttreacy.com>
 */
 
-body {
+html {
     background-image: url('background.jpg');
+    background-color: black;
 }
 
 #images {
     list-style: none;
+    display: block;
 }
 
 #images li {
@@ -22,17 +24,35 @@ body {
 
 #images li:first-child {
     display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
-#images li img {
+#images li > img {
+    display: block;
+    margin: 10px auto;
+    padding: 20px 20px 70px;
+    background-color: white;
+    box-shadow: 0 5px 5px 0 black;
+}
+
+.qr img {
+    padding-bottom: 20px;
     display: block;
     margin: 0 auto;
+}
+
+.qr {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
 }
 
 #images li + li img {
     width: 256px;
 }
 
-#images li + li img + img {
+#images li + li .qr {
     display: none;
 }
