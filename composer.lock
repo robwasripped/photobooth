@@ -4,63 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3334da467698d29e3267aea1f36b83e8",
-    "content-hash": "f8b133153441b2fe0221c2e8fd9cfad3",
+    "hash": "e724371c4262d96b8786874020f3611b",
+    "content-hash": "f793aeeacd44c88f5b2da9db610e38d0",
     "packages": [
-        {
-            "name": "abraham/twitteroauth",
-            "version": "0.6.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/abraham/twitteroauth.git",
-                "reference": "f7dec715c6e79e6085470b8b5d4dc2727afc5186"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/f7dec715c6e79e6085470b8b5d4dc2727afc5186",
-                "reference": "f7dec715c6e79e6085470b8b5d4dc2727afc5186",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpmd/phpmd": "2.3.*",
-                "phpunit/phpunit": "4.8.*",
-                "squizlabs/php_codesniffer": "2.3.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Abraham\\TwitterOAuth\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Abraham Williams",
-                    "email": "abraham@abrah.am",
-                    "homepage": "https://abrah.am",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The most popular PHP library for use with the Twitter OAuth REST API.",
-            "homepage": "https://twitteroauth.com",
-            "keywords": [
-                "Twitter API",
-                "Twitter oAuth",
-                "api",
-                "oauth",
-                "rest",
-                "social",
-                "twitter"
-            ],
-            "time": "2016-04-20 23:23:26"
-        },
         {
             "name": "arcanedev/qr-code",
             "version": "1.0.2",
@@ -114,60 +60,17 @@
             "time": "2014-10-25 20:57:30"
         },
         {
-            "name": "cosenary/instagram",
-            "version": "v2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cosenary/Instagram-PHP-API.git",
-                "reference": "fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cosenary/Instagram-PHP-API/zipball/fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5",
-                "reference": "fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MetzWeb\\Instagram\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Metz",
-                    "email": "christian-metz1@gmx.net",
-                    "homepage": "http://metzweb.net"
-                }
-            ],
-            "description": "An easy-to-use PHP Class for accessing Instagram's API.",
-            "homepage": "https://github.com/cosenary/Instagram-PHP-API",
-            "keywords": [
-                "api",
-                "instagram"
-            ],
-            "time": "2014-11-29 13:10:42"
-        },
-        {
             "name": "lusitanian/oauth",
-            "version": "v0.8.9",
+            "version": "v0.8.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Lusitanian/PHPoAuthLib.git",
-                "reference": "29bda6e176df6c292a9b1c43ae8a44d56a87c30b"
+                "reference": "09f4af38f17db6938253f4d1b171d537913ac1ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Lusitanian/PHPoAuthLib/zipball/29bda6e176df6c292a9b1c43ae8a44d56a87c30b",
-                "reference": "29bda6e176df6c292a9b1c43ae8a44d56a87c30b",
+                "url": "https://api.github.com/repos/Lusitanian/PHPoAuthLib/zipball/09f4af38f17db6938253f4d1b171d537913ac1ed",
+                "reference": "09f4af38f17db6938253f4d1b171d537913ac1ed",
                 "shasum": ""
             },
             "require": {
@@ -221,7 +124,7 @@
                 "oauth",
                 "security"
             ],
-            "time": "2016-02-24 00:20:18"
+            "time": "2016-07-12 22:15:40"
         }
     ],
     "packages-dev": [],
