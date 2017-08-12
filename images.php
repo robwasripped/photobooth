@@ -2,10 +2,10 @@
 
 require 'bootstrap.php';
 
-use OAuth\OAuth2\Service\Instagram;
-use OAuth\Common\Storage\Session;
 use OAuth\Common\Consumer\Credentials;
 use Arcanedev\QrCode\QrCode;
+use Arcanedev\QrCode\Builder;
+use Arcanedev\QrCode\Entities\ErrorCorrection;
 
 
 // Setup the credentials for the requests
@@ -24,9 +24,12 @@ $instagramService = $serviceFactory->createService('instagram', $credentials, $s
 $data = json_decode($instagramService->request('/users/self/media/recent'));
 
 foreach($data->data as $image) {
-    $qrCode = new QrCode;
-    $qrCode->setText($image->link);
-    $qrCode->setSize(200);
+    $builder = new Builder;
+    $builder->setText($image->link);
+    $builder->setSize(200);
+    $builder->setErrorCorrection(ErrorCorrection::LEVEL_HIGH);
+    
+    $qrCode = new QrCode($builder);
     
     include 'view/image.php';
 }

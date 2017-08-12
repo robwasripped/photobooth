@@ -2,8 +2,6 @@
 
 require 'bootstrap.php';
 
-use OAuth\OAuth2\Service\Instagram;
-use OAuth\Common\Storage\Session;
 use OAuth\Common\Consumer\Credentials;
 
 
