@@ -1,0 +1,95 @@
+html {
+    background: url('img/bg.jpg') center center;
+    background-color: black;
+}
+
+body {
+    margin: 0;
+}
+
+.polaroid {
+    display: block;
+    margin: 10px auto;
+    padding: 20px 20px 70px;
+    background-color: white;
+    box-shadow: 0 5px 5px 0 black;
+    width: 500px;
+    transform: rotate(-5deg);
+}
+#photo .polaroid {
+    position: relative;
+    top: 50px;
+    margin-top: 0;
+}
+
+.main-image {
+    animation: fadeIn 4s linear;
+    opacity: 1;
+    width: 500px;
+}
+
+#photo aside {
+    display: block;
+    position: relative;
+    top: 77px;
+    width: 640px;
+    margin: 0 auto;
+}
+
+aside section {
+  display: inline-block;
+  vertical-align: middle;
+}
+.instagram img {
+  height: 123px;
+  display: inline;
+  vertical-align: middle;
+}
+.instagram {
+  margin-left: 77px;
+}
+.instagram p {
+  display: inline;
+  vertical-align: middle;
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+  margin-left: 19px;
+}
+
+.fadeout {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: fadeInFromWhite 0.5s linear;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+@keyframes fadeInFromWhite {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

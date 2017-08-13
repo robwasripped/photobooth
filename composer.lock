@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e724371c4262d96b8786874020f3611b",
     "content-hash": "f793aeeacd44c88f5b2da9db610e38d0",
     "packages": [
         {
@@ -57,7 +56,7 @@
                 "qr-code",
                 "qrcode"
             ],
-            "time": "2014-10-25 20:57:30"
+            "time": "2014-10-25T20:57:30+00:00"
         },
         {
             "name": "lusitanian/oauth",
@@ -124,7 +123,7 @@
                 "oauth",
                 "security"
             ],
-            "time": "2016-07-12 22:15:40"
+            "time": "2016-07-12T22:15:40+00:00"
         }
     ],
     "packages-dev": [],
