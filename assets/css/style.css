@@ -1,6 +1,6 @@
 html {
-    background: url('img/bg.jpg') center center;
-    background-color: black;
+    background: url('../img/bg.jpg') center center;
+    background-size: cover;
 }
 
 body {
