@@ -11,14 +11,14 @@
     <body>
         <script type="text/javascript">
             angular.module('myApp', ['ngRoute'])
-                    .controller('photo', ['$scope', 'Poller', '$location',
-                        function ($scope, Poller, $location) {
+                    .controller('photo', ['$scope', 'Poller',
+                        function ($scope, Poller) {
                             $scope.imageUrl = Poller.data.response.images[0].url;
                             $scope.imageQr = Poller.data.response.images[0].qr;
                         }
                     ])
-                    .controller('gallery', ['$scope', 'Poller', '$location',
-                        function ($scope, Poller, $location) {
+                    .controller('gallery', ['$scope', 'Poller',
+                        function ($scope, Poller) {
                             $scope.images = Poller.data.response.images;
                         }
                     ])
@@ -41,11 +41,13 @@
                                 data.response = r.data;
                                 if(data.response.latest_image === previous) {
                                     $location.url('/gallery');
+                                    timeoutPeriod = 8000;
                                 } else {
                                     $location.url('/');
+                                    timeoutPeriod = 30000;
                                 }
                                 previous = r.data.latest_image;
-                                $timeout(poller, 8000);
+                                $timeout(poller, timeoutPeriod);
                             });
                         };
                         poller();
