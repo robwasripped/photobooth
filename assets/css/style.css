@@ -1,6 +1,7 @@
 html {
-    background: url('../img/bg.jpg') center center;
+    background: url('../img/glitter.gif') center center;
     background-size: cover;
+    min-height: 100%;
 }
 
 body {
@@ -31,23 +32,26 @@ body {
 #photo aside {
     display: block;
     position: relative;
-    top: 77px;
-    width: 640px;
-    margin: 0 auto;
+    top: -100px;
+    left: 444px;
 }
 
 aside section {
   display: inline-block;
   vertical-align: middle;
 }
+
+.qr {
+    box-shadow: 0 4px 8px 4px rgba(0,0,0,0.6);
+    transform: rotate(7deg);
+
+}
 .instagram img {
   height: 123px;
   display: inline;
   vertical-align: middle;
 }
-.instagram {
-  margin-left: 77px;
-}
+
 .instagram p {
   display: inline;
   vertical-align: middle;
