@@ -37,7 +37,6 @@ function getQrImageData($url)
 $response = new stdClass;
 
 $response->latest_image = $data->data[0]->id;
-$response->latest_image = 'foo';
 
 $response->images = array();
 
