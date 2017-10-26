@@ -3,6 +3,7 @@
 require 'bootstrap.php';
 
 use OAuth\Common\Consumer\Credentials;
+use OAuth\Common\Storage\Exception\TokenNotFoundException;
 
 
 // Setup the credentials for the requests
@@ -18,6 +19,11 @@ $scopes = array('basic', 'comments', 'relationships', 'likes');
 /** @var $instagramService Instagram */
 $instagramService = $serviceFactory->createService('instagram', $credentials, $storage, $scopes);
 
-$data = json_decode($instagramService->request('/users/self/media/recent'));
+try {
+    $data = json_decode($instagramService->request('/users/self/media/recent'));
+} catch (TokenNotFoundException $e) {
+    header('Location: authorise.php');
+    exit;
+}
 
 include 'view/index.php';

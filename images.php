@@ -21,15 +21,31 @@ $scopes = array('basic', 'comments', 'relationships', 'likes');
 /** @var $instagramService Instagram */
 $instagramService = $serviceFactory->createService('instagram', $credentials, $storage, $scopes);
 
-$data = json_decode($instagramService->request('/users/self/media/recent'));
+$data = json_decode($instagramService->request('/users/self/media/recent?count=9'));
 
-foreach($data->data as $image) {
+function getQrImageData($url)
+{
     $builder = new Builder;
-    $builder->setText($image->link);
+    $builder->setText($url);
     $builder->setSize(200);
     $builder->setErrorCorrection(ErrorCorrection::LEVEL_HIGH);
-    
+
     $qrCode = new QrCode($builder);
-    
-    include 'view/image.php';
+    return $qrCode->getDataUri();
 }
+
+$response = new stdClass;
+
+$response->latest_image = $data->data[0]->id;
+
+$response->images = array();
+
+foreach($data->data as $imageData) {
+    $image = new stdClass;
+    $image->url = $imageData->images->standard_resolution->url;
+    $image->qr = getQrImageData($imageData->link);
+
+    $response->images[] = $image;
+}
+
+echo json_encode($response);
